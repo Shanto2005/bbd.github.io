@@ -1,0 +1,137 @@
+@mixin minwidth($width){
+	@media (min-width: $width){
+		@content;
+	}
+}
+@mixin maxwidth($width){
+	@media (max-width: $width){
+		@content;
+	}
+}
+body{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.4;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+.mnewSlide_227{
+    background-size: cover;
+    background-position: center;
+    padding: 30px 0px;
+    @include minwidth(768px){
+        padding: 45px 0px;
+    }
+    @include minwidth(1600px){
+        padding: 75px 0px 560px;
+    }
+    .container{
+        @include minwidth(576px){
+            width: 90%;
+        }
+    }
+    .content_heading{
+        @include minwidth(1400px){
+            padding-left: 14px;
+        }
+        h1{
+            font-size: 23px;
+            font-weight: 700;
+            color: #000;
+            @include minwidth(576px){
+                font-size: 30px;
+            }
+            @include minwidth(992px){
+                font-size: 38px;
+            }
+            @include minwidth(1400px){
+                font-size: 48px;
+            }
+        }
+    }
+    .text_content{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        margin-top: 30px;
+        margin-left: -8px;
+        @include minwidth(1600px){
+            margin-top: 105px;
+        }
+    }
+    .text_holder{
+        background-color: #b3f1ed;
+        min-width: 300px;
+        padding: 15px;
+        @include minwidth(576px){
+            padding: 30px;
+        }
+        @include minwidth(768px){
+            padding: 45px 30px;
+        }
+        @include minwidth(992px){
+            padding: 45px 94px 32px 58px;
+        }
+        @include minwidth(1600px){
+            width: 1430px;
+        }
+        p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.2;
+            word-wrap: break-word;
+            @include minwidth(1200px){
+                font-size: 20px;
+            }
+        }
+    }
+    .box_2{
+        background-color: #afc9ff;
+        margin: 10px 0px;
+        @include minwidth(992px){
+            margin: 49px 0px 49px 44px;
+            padding: 44px 54px;
+        }
+        @include minwidth(1200px){
+            width: 700px;
+        }
+        @include minwidth(1600px){
+            width: 805px;
+        }
+    }
+    .box_3{
+        background-color: #fad6be;
+        @include minwidth(992px){
+            transform: translateY(12px) translateX(-3px);
+        }
+        @include minwidth(1200px){
+            width: 843px;
+            padding: 36px 94px 50px 58px;
+        }
+        @include minwidth(1600px){
+            width: 870px;
+            margin-left: -110px;
+        }
+    }
+    .slide_img{
+        max-width: 410px;
+        margin: auto;
+        padding-bottom: 30px;
+        @include minwidth(1200px){
+            position: absolute;
+            max-width: 343px;
+            bottom: 191px;
+            right: -35px;
+            padding-bottom: 0;
+        }
+        @include minwidth(1600px){
+            max-width: 800px;
+            bottom: -409px;
+            right: -292px;
+        }
+    }
+}
